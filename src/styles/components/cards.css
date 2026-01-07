@@ -1,54 +1,174 @@
-/* ============================================
-   CARD COMPONENTS
-   ============================================ */
+/* =========================================================
+   CARD COMPONENTS — GLOBAL STYLES
+   ========================================================= */
+
+:root {
+  --color-muted: #f9fafb;        /* Light background for cards */
+  --color-border: #e5e7eb;       /* Soft border */
+  --color-primary: #5b7484;
+  --color-danger: #b91c1c;
+  --radius-xl: 1rem;             /* Rounded corners */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.25);
+  --transition: 0.3s ease;
+}
+
+/* =========================================================
+   BASE CARD
+   ========================================================= */
 
 .card {
-  background-color: var(--muted);
-  border: 2px solid var(--border);
+  background-color: var(--color-muted);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: 1.5rem;
-  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
 }
 
 .card:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-/* Lobby Card */
+/* =========================================================
+   LOBBY CARD
+   ========================================================= */
+
 .lobby-card {
   width: 100%;
   max-width: 28rem;
   text-align: center;
+  padding: 1.75rem;
+  background: linear-gradient(145deg, #ffffff, #f0f3f7);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: all var(--transition);
 }
 
-/* Game Results Card */
+.lobby-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   GAME RESULTS CARD
+   ========================================================= */
+
 .game-results-card {
   margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: all var(--transition);
 }
 
-/* Game Over Card */
+.game-results-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   GAME OVER CARD
+   ========================================================= */
+
 .game-over-card {
   margin-bottom: 2rem;
   text-align: center;
+  background: #fffbfb;
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition);
 }
 
-/* Host Error Card */
+.game-over-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ef4444;
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================================
+   HOST ERROR CARD
+   ========================================================= */
+
 .host-error-card {
   text-align: center;
+  background: #fff1f0;
+  border: 1px solid #fca5a5;
+  color: var(--color-danger);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Host Setup Card */
+/* =========================================================
+   HOST SETUP CARD
+   ========================================================= */
+
 .host-setup-card {
   margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f5f7fa;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Quiz Empty Card */
+/* =========================================================
+   QUIZZES EMPTY CARD
+   ========================================================= */
+
 .quizzes-empty-card {
   text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition);
 }
 
-/* Quiz Detail Error Card */
+/* =========================================================
+   QUIZ DETAIL ERROR CARD
+   ========================================================= */
+
 .quiz-detail-error-card {
   text-align: center;
   max-width: 28rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff5f5;
+  border: 1px solid #f87171;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   CARD BUTTONS & ACTIONS
+   ========================================================= */
+
+.card button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.card .btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.card .btn-danger {
+  background-color: var(--color-danger);
+  color: #fff;
 }
