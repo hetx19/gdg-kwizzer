@@ -19,17 +19,15 @@
    ========================================================= */
 
 .card {
-  background-color: var(--color-muted);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition);
+    background-color: var(--muted);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* =========================================================
@@ -37,14 +35,9 @@
    ========================================================= */
 
 .lobby-card {
-  width: 100%;
-  max-width: 28rem;
-  text-align: center;
-  padding: 1.75rem;
-  background: linear-gradient(145deg, #ffffff, #f0f3f7);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition: all var(--transition);
+    width: 100%;
+    max-width: 28rem;
+    text-align: center;
 }
 
 .lobby-card:hover {
@@ -57,12 +50,7 @@
    ========================================================= */
 
 .game-results-card {
-  margin-bottom: 1.5rem;
-  background-color: #ffffff;
-  border-radius: var(--radius-xl);
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  transition: all var(--transition);
+    margin-bottom: 1.5rem;
 }
 
 .game-results-card:hover {
@@ -75,13 +63,8 @@
    ========================================================= */
 
 .game-over-card {
-  margin-bottom: 2rem;
-  text-align: center;
-  background: #fffbfb;
-  border-radius: var(--radius-xl);
-  padding: 2rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: all var(--transition);
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .game-over-card h2 {
@@ -96,13 +79,7 @@
    ========================================================= */
 
 .host-error-card {
-  text-align: center;
-  background: #fff1f0;
-  border: 1px solid #fca5a5;
-  color: var(--color-danger);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
 /* =========================================================
@@ -110,11 +87,7 @@
    ========================================================= */
 
 .host-setup-card {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: #f5f7fa;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
 }
 
 /* =========================================================
@@ -122,12 +95,7 @@
    ========================================================= */
 
 .quizzes-empty-card {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition);
+    text-align: center;
 }
 
 /* =========================================================
@@ -135,40 +103,18 @@
    ========================================================= */
 
 .quiz-detail-error-card {
-  text-align: center;
-  max-width: 28rem;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background-color: #fff5f5;
-  border: 1px solid #f87171;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 28rem;
 }
 
-/* =========================================================
-   CARD BUTTONS & ACTIONS
-   ========================================================= */
-
-.card button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.card button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-}
-
-.card .btn-primary {
-  background-color: var(--color-primary);
-  color: #fff;
-}
-
-.card .btn-danger {
-  background-color: var(--color-danger);
-  color: #fff;
+.scrollable-cards {
+    height: 500px;
+    overflow-y: auto;
+    backdrop-filter: blur(70px);
+    border-radius: 0.75rem;
+    background: radial-gradient(
+            ellipse 100% 70% at 100% 0%,
+            var(--glow-smoky) 10%, /* Spreads the brightness to half the page */ var(--glass-blue) 100% /* Soft finish at the bottom-left */
+    ) !important;
+    padding: 0.5rem 0.5rem 0.75rem 0.75rem;
 }
